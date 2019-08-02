@@ -33,7 +33,7 @@ $('document').ready(function(){
                 usn: usn
             }
         );
-        var storageRef = firebase.storage().ref(name+'.jpg');
+        var storageRef = firebase.storage().ref(usn+'.jpg');
         var task = storageRef.put(file);
         task.on('state_changed',
         function progress(snapshot){
